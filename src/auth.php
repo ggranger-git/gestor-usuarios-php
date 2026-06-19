@@ -20,7 +20,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header("Location: dashboard.php"); // Redirigimos a una página de control
         exit;
     } else {
-        echo "<h1>Credenciales incorrectas</h1>";
-        echo '<a href="index.php">Volver al login</a>';
+        echo '<!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <title>Error</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="max-container" style="margin-top: 50px;">
+                <div class="alert-error">Credenciales incorrectas</div>
+                <div style="text-align: center;">
+                    <a href="index.php" class="btn-action btn-edit">Volver al login</a>
+                </div>
+            </div>
+        </body>
+        </html>';
     }
 }
